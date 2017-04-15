@@ -1,7 +1,8 @@
 # Keep it simple for now...
 all:
 	mkdir -p ~/bin
-	rm ~/.bashrc && ln -s $(PWD)/bashrc ~/.bashrc
+	[ -f ~/.bashrc ] || rm ~/.bashrc
+	ln -s $(PWD)/bashrc ~/.bashrc
 	[ -f ~/.vimrc ] || ln -s $(PWD)/vimrc ~/.vimrc
 	[ -f ~/.config/nvim/init.vim ] || ln -s $(PWD)/vimrc ~/.config/nvim/init.vim
 	[ -f ~/.git-prompt.sh ] || ln -s $(PWD)/git-prompt.sh ~/.git-prompt.sh
