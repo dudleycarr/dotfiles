@@ -43,10 +43,6 @@ export HISTTIMEFORMAT='%F %T '
 shopt -s histappend # append to history, don't overwrite it
 shopt -s cmdhist    # save multi line commands as one command
 
-export NVM_DIR=~/.nvm
-#source $(brew --prefix nvm)/nvm.sh
-source /usr/local/opt/nvm/nvm.sh
-
 # -- Extract
 
 # extracts the given file
@@ -97,3 +93,6 @@ shopt -s extglob
 #include .files when globbing.
 shopt -s dotglob
 
+export GOPATH=/home/dudley/go
+export PATH=$GOPATH/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
