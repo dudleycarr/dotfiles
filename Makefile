@@ -1,7 +1,7 @@
 # Keep it simple for now...
 all:
 	mkdir -p ~/bin
-	[ -f ~/.bashrc ] || rm ~/.bashrc
+	[ -f ~/.bashrc ] && rm ~/.bashrc
 	ln -s $(PWD)/bashrc ~/.bashrc
 	[ -f ~/.vimrc ] || ln -s $(PWD)/vimrc ~/.vimrc
 	[ -f ~/.config/nvim/init.vim ] || ln -s $(PWD)/vimrc ~/.config/nvim/init.vim
